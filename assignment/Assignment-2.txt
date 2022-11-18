@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="#" class="form">
+       Enter a sentence:<input type="text" id="word"> <br>
+        Enter a latter: <input type="text" id="char"><br>
+         <input type="submit" name="btn" onclick="output()"><br> 
+    </form> 
+<script>
+  function output(){
+   let a=document.getElementById("word").value
+  let b=document.getElementById("char").value
+     let c=false
+     for(var i=0;i<a.length;i++){
+        if(a[i]==b){
+            c=true
+            var index=i
+             break
+        }
+     } 
+    if(c==true){
+         alert(a.slice(index+1))
+     }
+     else{
+         alert("the latter does not exist in the sentence")
+     }
+    }
+     
+</script>
+</body>
+</html>

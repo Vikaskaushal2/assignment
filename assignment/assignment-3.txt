@@ -1,0 +1,30 @@
+
+import java.util.*;
+public class assignmentq_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter a sentence");
+        String str=sc.nextLine();
+        System.out.println("enter a latter");
+        char c=sc.next().charAt(0);
+        boolean b=false;
+        int index=0;
+        for(int i=0;i<str.length();i++) {
+           if(str.charAt(i)==c) {
+        	   index=i;
+        	  b=true;
+        	  break;
+           }
+        }
+        if(b) {
+        	System.out.println(str.substring(index+1));
+        }
+        else {
+        	System.out.println("latter is not present in the string");
+        }
+        
+	}
+
+}
